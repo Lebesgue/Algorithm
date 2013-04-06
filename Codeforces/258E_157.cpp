@@ -1,3 +1,6 @@
+// trick 1: Offline calculation in DFS order
+// trick 2: No label push-down
+
 #include <cstdio>
 #include <algorithm>
 #include <vector>
