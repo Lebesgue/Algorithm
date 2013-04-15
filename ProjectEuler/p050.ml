@@ -30,7 +30,26 @@ let gen_prime n =
   in
   aux [] (List.tl (get_seq n))
 
+let foi = float_of_int
+let iof = int_of_float
+
+let is_square x = 
+  let t = iof (sqrt (foi x)) in
+  t * t == x
 
 let pm_list = gen_prime 100000
 let pm_tb = Hashtbl.create (List.length pm_list) 
 let () = List.iter (fun x -> Hashtbl.add pm_tb x true) pm_list
+
+let chk x = 
+  x mod 2 <> 0 && not (Hashtbl.mem pm_tb x) && 
+  not (List.exists 
+	(fun p -> p < x && (x-p) mod 2 == 0 && is_square ((x - p) / 2)) pm_list) in
+List.find chk (get_seq ~x:3 ~inc:2 100000)
+
+
+
+
+
+
+
