@@ -12,13 +12,6 @@ const long long md = 1000000007 ;
 
 long long ten[2*N]; // 10^n mod md
 
-// struct node{
-//     int s, p;
-// 	int c;
-// 	node () {}
-// 	node (int s1, int p1, int c1) : s(s1), p(p1), c(c1) {}
-// };
-
 struct node{
     long long s, p;
 	long long c;
