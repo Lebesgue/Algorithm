@@ -1,4 +1,4 @@
-object CF327C extends App {
+object CF327C_191 extends App {
   val s = Console.readLine
   val n : Long = s.size.toLong
   val k : Long = Console.readLine.toLong
